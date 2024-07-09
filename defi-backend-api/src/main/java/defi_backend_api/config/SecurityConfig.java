@@ -35,13 +35,6 @@ public class SecurityConfig {
                 .authenticationProvider(authenticationProvider)
                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
 
-        //todo oauth2 login
-
-//        http.oauth2Login(oauth ->{
-//                oauth.loginPage("/login");
-//                oauth.successHandler(null);
-//
-//        });
 
 
         return http.build();
