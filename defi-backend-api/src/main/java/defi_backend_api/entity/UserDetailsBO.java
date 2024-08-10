@@ -26,7 +26,13 @@ public class UserDetailsBO implements UserDetails {
 
     @Id
     @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "user_details_id_generator")
+    @SequenceGenerator(
+            name = "user_details_id_generator",
+            sequenceName = "user_details_id_seq",
+            allocationSize = 1)
     private Integer id;
 
     @Column(name = "first_name")
