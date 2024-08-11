@@ -12,7 +12,6 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserDetailsDto {
-
     private String firstName;
     private String lastName;
     private String email;

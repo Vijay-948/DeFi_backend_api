@@ -9,5 +9,5 @@ import java.util.Optional;
 @Repository
 public interface OtpRepository extends CrudRepository<OtpBO, String> {
 
-    Optional<OtpBO> findByEmail(String email);
+    Optional<OtpBO> findByEmailIgnoreCase(String email);
 }

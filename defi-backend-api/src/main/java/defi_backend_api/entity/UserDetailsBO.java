@@ -56,6 +56,9 @@ public class UserDetailsBO implements UserDetails {
     @Column(name = "created_on")
     private Date createdOn;
 
+    @Column(name = "modified_on")
+    private Date modifiedOn;
+
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
