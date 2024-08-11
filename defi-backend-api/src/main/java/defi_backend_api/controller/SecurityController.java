@@ -39,6 +39,11 @@ public class SecurityController {
         return new AppResponseDto<>(null, "User login Successfully");
     }
 
+    @GetMapping("/user")
+    public UserDetailsDto getUserInfo(@RequestParam String token){
+        return service.getFirstNameAndLastName(token);
+    }
+
 
 
 
